@@ -39,10 +39,13 @@ Changelog
 =========
 
 - 1.1.0
-  - Add dataset.info method
+  - Always get features from only one date. Default to current date
+  - Add Dataset.info method
   - Make Python3.x compatible
 
 - 1.0.1
-  - first working version
+  - Fixed import bug
 
+- 1.0.0
+  - First working version
 
