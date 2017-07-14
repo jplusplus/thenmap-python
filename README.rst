@@ -33,5 +33,16 @@ For more fine grained controll over the return geodata use the method get_geodat
   >>> swedish_municipalities.get_geodata(date="1975-05-03", format="topojson")
   {{u'crs': {u'type': u'name', ...}
 
-
 See http://thenmap.net for more info on the API.
+
+Changelog
+=========
+
+- 1.1.0
+  - Add dataset.info method
+  - Make Python3.x compatible
+
+- 1.0.1
+  - first working version
+
+
