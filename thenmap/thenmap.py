@@ -42,7 +42,7 @@ def point_in_polygon(point, polygon):
     return polygon.contains(pnt)
 
 
-class Dataset:
+class Dataset(object):
     """Represents a Thenmap dataset, e.g. countries of the world
     """
 
@@ -128,7 +128,7 @@ class Dataset:
         return None
 
 
-class Thenmap:
+class Thenmap(object):
     """Represents a connection to the Thenmap API"""
 
     VERSION = "v1"
