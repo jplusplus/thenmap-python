@@ -1,0 +1,4 @@
+dist
+thenmap.egg-info
+.git
+*.pyc
