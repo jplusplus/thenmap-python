@@ -24,7 +24,7 @@ Using
   {{u'crs': {u'type': u'name', ...}
 
   >>> swedish_municipalities.in_which("13.46,59.38")
-  1780
+  '1780'
 
 For more fine grained controll over the return geodata use the method get_geodata:
 
