@@ -39,6 +39,7 @@ Changelog
 =========
 
 - 1.1.0
+
   - Always get features from only one date. Default to current date
   - Add Dataset.info method
   - Make Python3.x compatible
