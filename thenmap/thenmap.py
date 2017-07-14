@@ -71,8 +71,6 @@ class Dataset(object):
         if len(paramstr):
             url += "?%s" % paramstr
 
-        print(url)
-
         res = requests.get(url)
         return res.json()[module]
 
