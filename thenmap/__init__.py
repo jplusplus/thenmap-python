@@ -1,2 +1,2 @@
 # Main classes
-from thenmap import Thenmap, Dataset
+from .thenmap import Thenmap, Dataset
