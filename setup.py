@@ -21,7 +21,7 @@ def readme():
 
 setup(
     name='thenmap',
-    version='1.0.1',
+    version='1.1.0',
 
     description='A Thenmap API wrapper',
     long_description=readme(),
