@@ -81,13 +81,18 @@ class Dataset(object):
         res = requests.get(url)
         return res.json()[module]
 
-    def get_geodata(self, date=None, format="geojson"):
+    def get_geodata(self, date=None,
+                    format="geojson", properties={},
+                    language=None):
         """Get geodata for a certain date, or all dates
         as either geojson or topojson
         """
         return self._fetch(date=date,
                            module="geo",
-                           params={"format": format})
+                           params={"format": format,
+                                   "geo_props": "|".join(properties),
+                                   "geo_lang": language,
+                                   })
 
     def get_info(self, date=None):
         """Get info. `date` does nothing here,
