@@ -7,8 +7,8 @@ Installing
 
   pip install thenmap
 
-Installing
-==========
+Using
+=====
 
 .. code:: python
 
@@ -27,6 +27,8 @@ Installing
   1780
 
 For more fine grained controll over the return geodata use the method get_geodata:
+
+.. code:: python
 
   >>> swedish_municipalities.get_geodata(date="1975-05-03", format="topojson")
   {{u'crs': {u'type': u'name', ...}
