@@ -59,15 +59,10 @@ class Dataset(object):
 
     def _fetch(self, date=None, module="info", params={}):
         """Generic method for fetching any data from any modul"""
-        fragments = [self.api.VERSION, self.id, module]
-        if date:
-            # If date is None we will fetch all features
-            fragments.append(date)
-        else:
-            # If only one date, we will flatten properties,
-            # as each feature can have only one property
-            # at a given time anyway (as of v1)
-            params["geo_flatten_props"] = True
+        if date is None:
+            date = self.date
+        fragments = [self.api.VERSION, self.id, module, date]
+
         url = self.api.URL % "/".join(fragments)
 
         paramstr = "&".join("%s=%s" % (k, v)
@@ -92,6 +87,7 @@ class Dataset(object):
                            params={"format": format,
                                    "geo_props": "|".join(properties),
                                    "geo_lang": language,
+                                   "geo_flatten_props": True,
                                    })
 
     def get_info(self, date=None):
