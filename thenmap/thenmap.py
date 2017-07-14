@@ -21,13 +21,13 @@ def point_from_coordinates(input_):
 
     elif isinstance(input_, string_types):
         for sep in [",", ";", "|"]:
-            if len(input_.split(sep)) == 2:
+            if len(input_.split(sep)) in range(2, 3):
                 t = input_.split(sep)
 
     elif isinstance(input_, Iterable):
         # Strings are iterable in Python 3,
         # so this must come after string check
-        t = (input_[0], input_[1])
+        t = (input_)
 
     else:
         raise Exception("Invalid coordinates: %s" % input_)
