@@ -166,6 +166,6 @@ Check Thenmap.dataset for avilable id's.")
 
 
 if __name__ == "__main__":
-    print "This module is only intended to be called from other scripts."
+    print("This module is only intended to be called from other scripts.")
     import sys
     sys.exit()
