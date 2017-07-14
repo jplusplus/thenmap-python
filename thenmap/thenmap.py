@@ -76,6 +76,8 @@ class Dataset(object):
         if len(paramstr):
             url += "?%s" % paramstr
 
+        print(url)
+
         res = requests.get(url)
         return res.json()[module]
 
@@ -102,8 +104,12 @@ class Dataset(object):
         """
         return self._fetch(date=date,
                            module="data",
-                           params={"data_props": properties,
+                           params={"data_props": "|".join(properties),
                                    "data_lang": language})
+
+    @property
+    def info(self):
+        return self.get_info()
 
     @property
     def geojson(self):
@@ -126,6 +132,9 @@ class Dataset(object):
             if point_in_polygon(coordinate, feature):
                 return feature["properties"]["id"]
         return None
+
+    def __repr__(self):
+        return "<Dataset: %s (%s)>" % (self.id, self.label)
 
 
 class Thenmap(object):
@@ -159,10 +168,13 @@ class Thenmap(object):
     def __getitem__(self, key):
         """ Expose datasets with bracket notation """
         try:
-            return filter(lambda x: x.id == key, self.datasets).pop()
+            return list(filter(lambda x: x.id == key, self.datasets)).pop()
         except IndexError:
             raise IndexError("No such dataset. \
 Check Thenmap.dataset for avilable id's.")
+
+    def __repr__(self):
+        return "<Thenmap API version %s>" % (self.VERSION)
 
 
 if __name__ == "__main__":
