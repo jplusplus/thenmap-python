@@ -1,11 +1,13 @@
 A simple wrapper for the Thenmap API.
 
+
 Installing
 ==========
 
 .. code:: bash
 
   pip install thenmap
+
 
 Using
 =====
@@ -35,6 +37,17 @@ For more fine grained controll over the return geodata use the method get_geodat
 
 See http://thenmap.net for more info on the API.
 
+
+Developing
+==========
+
+To run tests:
+
+.. code-block:: python
+
+  python -m pytest test/*
+
+  
 Changelog
 =========
 
