@@ -63,7 +63,7 @@ class Dataset(object):
         self.date = date
 
     def _fetch(self, date=None, module="info", params={}):
-        """Generic method for fetching any data from any modul"""
+        """Generic method for fetching any data from any API module"""
         if date is None:
             date = self.date
         fragments = [self.api.VERSION, self.id, module, date]
