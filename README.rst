@@ -45,7 +45,8 @@ To run tests:
 
 .. code-block:: python
 
-  python -m pytest test/*
+  python2 -m pytest test/*
+  python3 -m pytest test/*
 
   
 Changelog
