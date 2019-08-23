@@ -55,7 +55,7 @@ Changelog
 - next
 
   - Added tests
-  - Require Shapely >= 1.7
+  - Specify required Shapely version
 
 - 1.1.0
 

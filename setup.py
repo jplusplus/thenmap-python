@@ -31,7 +31,7 @@ setup(
     license='MIT',
     packages=["thenmap"],
     install_requires=[
-        "shapely>=1.7",
+        "shapely>=1.0.4",
         "requests",
         "six"
     ],
