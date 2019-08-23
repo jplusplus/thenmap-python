@@ -54,6 +54,7 @@ Changelog
 
 - next
 
+  - Improved exception handling
   - Added tests
   - Specify required Shapely version
   - Get rid of collections DeprecationWarning in Python 3.7+
