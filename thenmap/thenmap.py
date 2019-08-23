@@ -27,7 +27,7 @@ def point_from_coordinates(input_):
             if len(input_.split(sep)) in range(2, 3):
                 t = input_.split(sep)
         if isinstance(t, string_types):
-            raise Exception("Invalid coordinates: %s" % input_)
+            raise ValueError("Invalid coordinates: %s" % input_)
 
     elif isinstance(input_, Iterable):
         # Strings are iterable in Python 3,
@@ -35,7 +35,7 @@ def point_from_coordinates(input_):
         t = (input_)
 
     else:
-        raise Exception("Invalid coordinates: %s" % input_)
+        raise TypeError("Invalid coordinate type: %s" % type(input_))
 
     return Point(tuple(float(x) for x in t))
 
