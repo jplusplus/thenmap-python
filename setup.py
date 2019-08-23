@@ -30,5 +30,9 @@ setup(
     author_email='stockholm@jplusplus.org',
     license='MIT',
     packages=["thenmap"],
-    install_requires=["shapely", "requests", "six"],
+    install_requires=[
+        "shapely>=1.7",
+        "requests",
+        "six"
+    ],
 )
