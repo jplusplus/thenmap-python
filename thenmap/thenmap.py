@@ -6,7 +6,10 @@ want to use e.g. C++ with CGAL
 
 import requests
 from shapely.geometry import shape, Point
-from collections import Iterable
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
 from six import string_types
 from datetime import datetime
 
