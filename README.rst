@@ -51,6 +51,11 @@ To run tests:
 Changelog
 =========
 
+- next
+
+  - Added tests
+  - Require Shapely >= 1.7
+
 - 1.1.0
 
   - Always get features from only one date. Default to current date
