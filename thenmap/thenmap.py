@@ -26,7 +26,7 @@ def point_from_coordinates(input_):
         for sep in [",", ";", "|"]:
             if len(input_.split(sep)) in range(2, 3):
                 t = input_.split(sep)
-        if isinstance(input_, string_types):
+        if isinstance(t, string_types):
             raise Exception("Invalid coordinates: %s" % input_)
 
     elif isinstance(input_, Iterable):
