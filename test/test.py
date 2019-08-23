@@ -16,3 +16,7 @@ def test_date():
     se_7.date = "1971-12-24"
     assert(len(se_7.geojson["features"]) == 346)
 
+def test_in_which():
+    api = Thenmap()
+    se_7 = api["se-7"]
+    assert(se_7.in_which("13.46,59.38") == '1780')
